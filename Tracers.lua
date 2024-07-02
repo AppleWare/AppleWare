@@ -12,7 +12,6 @@ local Find_Required = API_Check()
 
 if Find_Required == "No" then
     NotifyLib.prompt('AppleWare', 'Tracer script could not be loaded because your exploit is unsupported.', 15)
-
     return
 end
 
@@ -155,7 +154,7 @@ UserInputService.InputBegan:Connect(function(Input)
             _G.FromMouse = false
 
             if _G.SendNotifications == true then
-                NotifyLib.prompt('AppleWare', 'Tracers will be now coming from the bottom of your screen (Mode 1)', 15)
+                NotifyLib.prompt('AppleWare', 'Tracers will be now coming from the bottom of your screen (Mode 1)', 3)
             end
         elseif _G.FromMouse == false and _G.FromCenter == false and _G.FromBottom == true and _G.TracersVisible == true then
             _G.FromCenter = true
@@ -163,7 +162,7 @@ UserInputService.InputBegan:Connect(function(Input)
             _G.FromMouse = false
 
             if _G.SendNotifications == true then
-                NotifyLib.prompt('AppleWare', 'Tracers will be now coming from the center of your screen (Mode 2)', 15)
+                NotifyLib.prompt('AppleWare', 'Tracers will be now coming from the center of your screen (Mode 2)', 3)
             end
         elseif _G.FromMouse == false and _G.FromCenter == true and _G.FromBottom == false and _G.TracersVisible == true then
             _G.FromCenter = false
@@ -171,14 +170,14 @@ UserInputService.InputBegan:Connect(function(Input)
             _G.FromMouse = true
 
             if _G.SendNotifications == true then
-                NotifyLib.prompt('AppleWare', 'Tracers will be now coming from the position of your mouse cursor on your screen (Mode 3)', 15)
+                NotifyLib.prompt('AppleWare', 'Tracers will be now coming from the position of your mouse cursor on your screen (Mode 3)', 3)
             end
         end
     elseif Input.KeyCode == _G.DisableKey and Typing == false then
         _G.TracersVisible = not _G.TracersVisible
         
         if _G.SendNotifications == true then
-            NotifyLib.prompt('AppleWare', "The tracers' visibility is now set to "..tostring(_G.TracersVisible)..".", 15)
+            NotifyLib.prompt('AppleWare', "The tracers' visibility is now set to "..tostring(_G.TracersVisible)..".", 3)
         end
     end
 end)
@@ -202,7 +201,7 @@ end)
 
 if Success and not Errored then
     if _G.SendNotifications == true then
-        NotifyLib.prompt('AppleWare', 'Tracers Successfully Loaded', 15)
+        NotifyLib.prompt('AppleWare', 'Tracers Successfully Loaded', 3)
     end
 elseif Errored and not Success then
     if _G.SendNotifications == true then
