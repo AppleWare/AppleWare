@@ -3,3 +3,5 @@ local Keys = {
     "test2",
     "test3"
 }
+
+return { Keys = Keys }
