@@ -4,4 +4,4 @@ local Keys = {
     "test3"
 }
 
-return { Keys = Keys }
+return Keys
