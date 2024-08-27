@@ -1,4 +1,3 @@
-
 local Players = game:GetService("Players")
 local UserInputService = game:GetService("UserInputService")
 local RunService = game:GetService("RunService")
@@ -6,7 +5,6 @@ local Teams = game:GetService("Teams")
 
 local LocalPlayer = Players.LocalPlayer
 local Mouse = LocalPlayer:GetMouse()
-
 
 _G.triggerbot = false
 _G.Teamcheck = false
@@ -40,7 +38,6 @@ local function triggerBot()
     end
 end
 
-
 UserInputService.InputBegan:Connect(function(input, gameProcessed)
     if not gameProcessed then
         if input.KeyCode == Enum.KeyCode.T then
@@ -52,6 +49,5 @@ UserInputService.InputBegan:Connect(function(input, gameProcessed)
         end
     end
 end)
-
 
 RunService.RenderStepped:Connect(triggerBot)
