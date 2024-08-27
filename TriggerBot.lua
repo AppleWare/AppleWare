@@ -30,7 +30,6 @@ end
 
 local function simulateMouseClick()
     mouse1press()
-    wait()
     mouse1release()
 end
 
