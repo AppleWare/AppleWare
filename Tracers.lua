@@ -28,8 +28,6 @@ _G.DefaultSettings = false
 
 _G.TeamCheck = false
 
---[!]-- ONLY ONE OF THESE VALUES SHOULD BE SET TO TRUE TO NOT ERROR THE SCRIPT --[!]--
-
 _G.FromMouse = false   -- If set to true, the tracers will come from the position of your mouse curson on your screen.
 _G.FromCenter = false   -- If set to true, the tracers will come from the center of your screen.
 _G.FromBottom = true   -- If set to true, the tracers will come from the bottom of your screen.
@@ -39,8 +37,8 @@ _G.TracerColor = Color3.fromRGB(255, 80, 10)   -- The color that the tracers wou
 _G.TracerThickness = 1   -- The thickness of the tracers.
 _G.TracerTransparency = 0.7   -- The transparency of the tracers.
 
-_G.ModeSkipKey = Enum.KeyCode.E   -- The key that changes between modes that indicate where will the tracers come from.
-_G.DisableKey = Enum.KeyCode.Q   -- The key that disables / enables the tracers.
+_G.ModeSkipKey = ""   -- The key that changes between modes that indicate where will the tracers come from.
+_G.DisableKey = ""   -- The key that disables / enables the tracers.
 
 local function CreateTracers()
     for _, v in next, Players:GetPlayers() do
